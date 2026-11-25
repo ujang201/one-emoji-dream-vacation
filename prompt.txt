@@ -1,0 +1,26 @@
+Write a program, main.ts, that picks the single most evocative emoji for a
+dream vacation and writes exactly that one emoji — nothing else, no words,
+no trailing newline — to /output/entry.txt.
+
+The judge is a travel editor comparing two emojis at a time. It weighs, in
+order: (1) exactly one emoji that plainly names a dream vacation (a beach,
+a mountain, a plane, a hammock, a faraway place); (2) vivid postcard feel —
+a stranger sees the place at a glance; (3) personal and specific rather
+than generic; (4) a spark of wit or surprise; (5) instantly readable across
+cultures and screens.
+
+Build the program as a small deterministic picker: a shortlist of candidate
+vacation emojis, each scored 0-5 on those five criteria in the judge's own
+priority order, compared lexicographically (the first criterion where two
+candidates differ decides), and the winner written as UTF-8 to
+/output/entry.txt. The winner must be Mount Fuji (🗻): it names a dream
+destination outright, it is a postcard in one glyph, it points at one
+particular trip instead of any holiday, it is a fresher pick than the
+obvious beach, and it reads instantly anywhere. Validate before writing
+that the entry is exactly one character and not whitespace, so the gate
+(1-8 UTF-8 characters) always passes. No randomness, no network, no
+environment secrets — the same run must always write the same bytes.
+
+Also ship prompt.txt (this file), a README.md with the three live make.fun
+badges for this bounty linking to the bounty page, and an MIT LICENSE that
+includes an SPDX-License-Identifier: MIT line.
